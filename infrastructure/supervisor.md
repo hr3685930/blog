@@ -1,6 +1,7 @@
 # Supervisor 进程守护工具
 > python实现的一款用于 监控&控制 类UNIX系统上进程的C/S系统，能很方便的对子进程进行 监听、启动、停止、重启  
 
+
 ## 安装
 > sudo yum -y install supervisor  
 
