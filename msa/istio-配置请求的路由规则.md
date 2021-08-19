@@ -7,10 +7,10 @@
 下面这个例子能够根据网站的不同登陆用户，将流量划分到服务的不同版本和实例。跟kubernetes中的应用一样，所有的路由规则都是通过声明式的yaml配置。关于reviews:v1和reviews:v2的唯一区别是，v1没有调用评分服务，productpage页面上不会显示评分星标。
 
 - 将微服务的默认版本设置成v1。
-> istioctl create -f samples/apps/bookinfo/route-rule-all-v1.yaml  
+> istioctl create -f samples/apps/bookinfo/route-rule-all-v1.yaml
 
 - 使用以下命令查看定义的路由规则。
-> istioctl get route-rules   
+> istioctl get route-rules
 由于对代理的规则传播是异步的，因此在尝试访问应用程序之前，需要等待几秒钟才能将规则传播到所有pod。
 
 - 在浏览器中打开BookInfo URL（http://ingress.istio.io/productpage ）您应该会看到BookInfo应用程序的产品页面显示。 产品页面上没有评分星，因为reviews:v1不访问评级服务。
