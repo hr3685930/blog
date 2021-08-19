@@ -17,7 +17,7 @@
 - Lumen下：在bootstrap/app中注册
 > $app->register(Dingo\Api\Provider\LumenServiceProvider::class);  
 - Laravel下：在`config/app.php`中注册
-> `Dingo\Api\Provider\LaravelServiceProvider::class  
+> Dingo\Api\Provider\LaravelServiceProvider::class  
 - 发布配置
 > php artisan vendor:publish --provider="Dingo\Api\Provider\LaravelServiceProvider"  
 
@@ -51,6 +51,7 @@ $api->version('v1', function ($api) {
 响应模式
 1. 直接返回集合或对象（自动处理为json）
 2. 响应构建器
+
 		* 响应输出前morph变形流程 response > transformers > formatters > 输出
 		* 基类控制器引入响应构建器
 				* Trait：use Dingo\Api\Routing\Helpers;
