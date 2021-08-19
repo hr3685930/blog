@@ -1,10 +1,10 @@
-#Supervisor 进程守护工具
+# Supervisor 进程守护工具
 > python实现的一款用于 监控&控制 类UNIX系统上进程的C/S系统，能很方便的对子进程进行 监听、启动、停止、重启  
 
-##安装
+## 安装
 > sudo yum -y install supervisor  
 
-##配置
+## 配置
 * 配置文件路径/etc/supervisor/conf.d/进程名.conf
 ```
 * 配置生效需要重启[program:进程名]
@@ -24,16 +24,17 @@
 * stderr_logfile_backups=0
 ```
 
-##服务端
+## 服务端
 ```
 * 负责启动并管理配置的子进程
 * 响应客户端命令# 启动管理服务
 * supervisord  [-c /etc/supervisor/supervisord.conf]
 ```
 
-##客户端
+## 客户端
 * 交互式Shell模式，supervisorctl命令
 * 直接执行命令模式
+
 ```  
 #服务管理
 supervisorctl shutdown  #关闭服务
